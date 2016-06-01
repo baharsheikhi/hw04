@@ -10,10 +10,10 @@ import java.util.*;
  */
 public class WhistTrumpModel extends WhistModel {
 
-  @Override
-  public void startPlay(int numPlayers, List<StandardCard> deck) {
-
-  }
+//  @Override
+//  public void startPlay(int numPlayers, List<StandardCard> deck) {
+//
+//  }
 
   @Override
   protected int getWinner(List<StandardCard> cards) {
@@ -22,13 +22,21 @@ public class WhistTrumpModel extends WhistModel {
 
   @Override
   public String getGameState() {
-    return null;
+    String ret = "";
+    ret = super.getGameState();
+    ret+="Trump suit: "+this.trump.toString();
+    return ret;
   }
 
   private final Suit trump;
 
   public WhistTrumpModel() {
     super();
+    this.trump = null;
+  }
+
+  public WhistTrumpModel(List<StandardCard> deck) {
+    super(deck);
     this.trump = null;
   }
 
