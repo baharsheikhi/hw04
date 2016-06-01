@@ -289,7 +289,7 @@ public class WhistModel extends GenericStandardDeckGame implements CardGameModel
      *
      * @return the player with the highest card
      */
-    private int getWinner(List<StandardCard> cards) {
+    protected int getWinner(List<StandardCard> cards) {
         int ret;
         if (Suit.getSuit(cards.get(0).toString()) == this.trickSuit) {
             ret = cardsInPlay.get(cards.get(0));
@@ -306,7 +306,7 @@ public class WhistModel extends GenericStandardDeckGame implements CardGameModel
      *
      * @return the list of cards played in this trick.
      */
-    private List<StandardCard> getWinningList() {
+     List<StandardCard> getWinningList() {
         Set<StandardCard> cardSet = this.cardsInPlay.keySet();
         List<StandardCard> cards = new ArrayList<>(cardSet);
         Collections.sort(cards);
