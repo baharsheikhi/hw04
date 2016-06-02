@@ -53,7 +53,6 @@ public class GenericStandardDeckGame implements GenericCardGameModel<StandardCar
             allCards.add(new StandardCard(Suit.Spades, Rank.intToRank(i)));
         }
 
-        Collections.shuffle(allCards);
         return allCards;
     }
 
