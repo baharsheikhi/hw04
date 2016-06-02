@@ -10,9 +10,8 @@ import java.util.*;
  */
 public class WhistTrumpModelTest {
   List<StandardCard> basicDeck;
-  List<StandardCard> oneTrumpDeck;
   List<StandardCard> trumpStandOffDeck;
-  List<StandardCard> oneTrumpDeck2;
+  List<StandardCard> oneTrumpDeck;
   //the Trump Suit will be clubs in this game
   //tests forfeit without trump in the last round, and tests basic trump trick in the first round
   //all the other rounds are basic rounds
@@ -25,7 +24,6 @@ public class WhistTrumpModelTest {
   public void initData() {
     this.basicDeck = new ArrayList<>();
     this.oneTrumpDeck = new ArrayList<>();
-    this.oneTrumpDeck2 = new ArrayList<>();
     this.trumpStandOffDeck = new ArrayList<>();
 
     //testBasicTrumpTrick: the Trump suit is clubs and player 1 wins the first trick
@@ -97,70 +95,70 @@ public class WhistTrumpModelTest {
     basicDeck.add(new StandardCard(Suit.Spades, Rank.Two));
 
     //new deck
-    oneTrumpDeck2.add(new StandardCard(Suit.Clubs, Rank.Ace));
-    oneTrumpDeck2.add(new StandardCard(Suit.Clubs, Rank.King));
-    oneTrumpDeck2.add(new StandardCard(Suit.Hearts, Rank.Ace));
-    oneTrumpDeck2.add(new StandardCard(Suit.Spades, Rank.Ace));
+    oneTrumpDeck.add(new StandardCard(Suit.Clubs, Rank.Ace));
+    oneTrumpDeck.add(new StandardCard(Suit.Clubs, Rank.King));
+    oneTrumpDeck.add(new StandardCard(Suit.Hearts, Rank.Ace));
+    oneTrumpDeck.add(new StandardCard(Suit.Spades, Rank.Ace));
 
-    oneTrumpDeck2.add(new StandardCard(Suit.Diamonds, Rank.King));
-    oneTrumpDeck2.add(new StandardCard(Suit.Diamonds, Rank.Ace));
-    oneTrumpDeck2.add(new StandardCard(Suit.Hearts, Rank.King));
-    oneTrumpDeck2.add(new StandardCard(Suit.Spades, Rank.King));
+    oneTrumpDeck.add(new StandardCard(Suit.Diamonds, Rank.King));
+    oneTrumpDeck.add(new StandardCard(Suit.Diamonds, Rank.Ace));
+    oneTrumpDeck.add(new StandardCard(Suit.Hearts, Rank.King));
+    oneTrumpDeck.add(new StandardCard(Suit.Spades, Rank.King));
 
-    oneTrumpDeck2.add(new StandardCard(Suit.Diamonds, Rank.Queen));
-    oneTrumpDeck2.add(new StandardCard(Suit.Clubs, Rank.Queen));
-    oneTrumpDeck2.add(new StandardCard(Suit.Hearts, Rank.Queen));
-    oneTrumpDeck2.add(new StandardCard(Suit.Spades, Rank.Queen));
+    oneTrumpDeck.add(new StandardCard(Suit.Diamonds, Rank.Queen));
+    oneTrumpDeck.add(new StandardCard(Suit.Clubs, Rank.Queen));
+    oneTrumpDeck.add(new StandardCard(Suit.Hearts, Rank.Queen));
+    oneTrumpDeck.add(new StandardCard(Suit.Spades, Rank.Queen));
 
-    oneTrumpDeck2.add(new StandardCard(Suit.Diamonds, Rank.Jack));
-    oneTrumpDeck2.add(new StandardCard(Suit.Clubs, Rank.Jack));
-    oneTrumpDeck2.add(new StandardCard(Suit.Hearts, Rank.Jack));
-    oneTrumpDeck2.add(new StandardCard(Suit.Spades, Rank.Jack));
+    oneTrumpDeck.add(new StandardCard(Suit.Diamonds, Rank.Jack));
+    oneTrumpDeck.add(new StandardCard(Suit.Clubs, Rank.Jack));
+    oneTrumpDeck.add(new StandardCard(Suit.Hearts, Rank.Jack));
+    oneTrumpDeck.add(new StandardCard(Suit.Spades, Rank.Jack));
 
-    oneTrumpDeck2.add(new StandardCard(Suit.Diamonds, Rank.Ten));
-    oneTrumpDeck2.add(new StandardCard(Suit.Clubs, Rank.Ten));
-    oneTrumpDeck2.add(new StandardCard(Suit.Hearts, Rank.Ten));
-    oneTrumpDeck2.add(new StandardCard(Suit.Spades, Rank.Ten));
+    oneTrumpDeck.add(new StandardCard(Suit.Diamonds, Rank.Ten));
+    oneTrumpDeck.add(new StandardCard(Suit.Clubs, Rank.Ten));
+    oneTrumpDeck.add(new StandardCard(Suit.Hearts, Rank.Ten));
+    oneTrumpDeck.add(new StandardCard(Suit.Spades, Rank.Ten));
 
-    oneTrumpDeck2.add(new StandardCard(Suit.Diamonds, Rank.Nine));
-    oneTrumpDeck2.add(new StandardCard(Suit.Clubs, Rank.Nine));
-    oneTrumpDeck2.add(new StandardCard(Suit.Hearts, Rank.Nine));
-    oneTrumpDeck2.add(new StandardCard(Suit.Spades, Rank.Nine));
+    oneTrumpDeck.add(new StandardCard(Suit.Diamonds, Rank.Nine));
+    oneTrumpDeck.add(new StandardCard(Suit.Clubs, Rank.Nine));
+    oneTrumpDeck.add(new StandardCard(Suit.Hearts, Rank.Nine));
+    oneTrumpDeck.add(new StandardCard(Suit.Spades, Rank.Nine));
 
-    oneTrumpDeck2.add(new StandardCard(Suit.Diamonds, Rank.Eight));
-    oneTrumpDeck2.add(new StandardCard(Suit.Clubs, Rank.Eight));
-    oneTrumpDeck2.add(new StandardCard(Suit.Hearts, Rank.Eight));
-    oneTrumpDeck2.add(new StandardCard(Suit.Spades, Rank.Eight));
+    oneTrumpDeck.add(new StandardCard(Suit.Diamonds, Rank.Eight));
+    oneTrumpDeck.add(new StandardCard(Suit.Clubs, Rank.Eight));
+    oneTrumpDeck.add(new StandardCard(Suit.Hearts, Rank.Eight));
+    oneTrumpDeck.add(new StandardCard(Suit.Spades, Rank.Eight));
 
-    oneTrumpDeck2.add(new StandardCard(Suit.Diamonds, Rank.Seven));
-    oneTrumpDeck2.add(new StandardCard(Suit.Clubs, Rank.Seven));
-    oneTrumpDeck2.add(new StandardCard(Suit.Hearts, Rank.Seven));
-    oneTrumpDeck2.add(new StandardCard(Suit.Spades, Rank.Seven));
+    oneTrumpDeck.add(new StandardCard(Suit.Diamonds, Rank.Seven));
+    oneTrumpDeck.add(new StandardCard(Suit.Clubs, Rank.Seven));
+    oneTrumpDeck.add(new StandardCard(Suit.Hearts, Rank.Seven));
+    oneTrumpDeck.add(new StandardCard(Suit.Spades, Rank.Seven));
 
-    oneTrumpDeck2.add(new StandardCard(Suit.Diamonds, Rank.Six));
-    oneTrumpDeck2.add(new StandardCard(Suit.Clubs, Rank.Six));
-    oneTrumpDeck2.add(new StandardCard(Suit.Hearts, Rank.Six));
-    oneTrumpDeck2.add(new StandardCard(Suit.Spades, Rank.Six));
+    oneTrumpDeck.add(new StandardCard(Suit.Diamonds, Rank.Six));
+    oneTrumpDeck.add(new StandardCard(Suit.Clubs, Rank.Six));
+    oneTrumpDeck.add(new StandardCard(Suit.Hearts, Rank.Six));
+    oneTrumpDeck.add(new StandardCard(Suit.Spades, Rank.Six));
 
-    oneTrumpDeck2.add(new StandardCard(Suit.Diamonds, Rank.Five));
-    oneTrumpDeck2.add(new StandardCard(Suit.Clubs, Rank.Five));
-    oneTrumpDeck2.add(new StandardCard(Suit.Hearts, Rank.Five));
-    oneTrumpDeck2.add(new StandardCard(Suit.Spades, Rank.Five));
+    oneTrumpDeck.add(new StandardCard(Suit.Diamonds, Rank.Five));
+    oneTrumpDeck.add(new StandardCard(Suit.Clubs, Rank.Five));
+    oneTrumpDeck.add(new StandardCard(Suit.Hearts, Rank.Five));
+    oneTrumpDeck.add(new StandardCard(Suit.Spades, Rank.Five));
 
-    oneTrumpDeck2.add(new StandardCard(Suit.Diamonds, Rank.Four));
-    oneTrumpDeck2.add(new StandardCard(Suit.Clubs, Rank.Four));
-    oneTrumpDeck2.add(new StandardCard(Suit.Hearts, Rank.Four));
-    oneTrumpDeck2.add(new StandardCard(Suit.Spades, Rank.Four));
+    oneTrumpDeck.add(new StandardCard(Suit.Diamonds, Rank.Four));
+    oneTrumpDeck.add(new StandardCard(Suit.Clubs, Rank.Four));
+    oneTrumpDeck.add(new StandardCard(Suit.Hearts, Rank.Four));
+    oneTrumpDeck.add(new StandardCard(Suit.Spades, Rank.Four));
 
-    oneTrumpDeck2.add(new StandardCard(Suit.Diamonds, Rank.Three));
-    oneTrumpDeck2.add(new StandardCard(Suit.Clubs, Rank.Three));
-    oneTrumpDeck2.add(new StandardCard(Suit.Hearts, Rank.Three));
-    oneTrumpDeck2.add(new StandardCard(Suit.Spades, Rank.Three));
+    oneTrumpDeck.add(new StandardCard(Suit.Diamonds, Rank.Three));
+    oneTrumpDeck.add(new StandardCard(Suit.Clubs, Rank.Three));
+    oneTrumpDeck.add(new StandardCard(Suit.Hearts, Rank.Three));
+    oneTrumpDeck.add(new StandardCard(Suit.Spades, Rank.Three));
 
-    oneTrumpDeck2.add(new StandardCard(Suit.Diamonds, Rank.Two));
-    oneTrumpDeck2.add(new StandardCard(Suit.Clubs, Rank.Two));
-    oneTrumpDeck2.add(new StandardCard(Suit.Hearts, Rank.Two));
-    oneTrumpDeck2.add(new StandardCard(Suit.Spades, Rank.Two));
+    oneTrumpDeck.add(new StandardCard(Suit.Diamonds, Rank.Two));
+    oneTrumpDeck.add(new StandardCard(Suit.Clubs, Rank.Two));
+    oneTrumpDeck.add(new StandardCard(Suit.Hearts, Rank.Two));
+    oneTrumpDeck.add(new StandardCard(Suit.Spades, Rank.Two));
 
 
     this.basicTrick = new WhistTrumpModel();
@@ -194,7 +192,7 @@ public class WhistTrumpModelTest {
   @Test
   public void testOneTrump() {
     this.initData();
-    this.oneTrump.startPlay(4, this.oneTrumpDeck2);
+    this.oneTrump.startPlay(4, this.oneTrumpDeck);
 
     this.oneTrump.getGameState();
 
