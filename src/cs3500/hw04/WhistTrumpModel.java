@@ -19,7 +19,14 @@ public class WhistTrumpModel extends WhistModel {
 
   @Override
   protected int getWinner(List<StandardCard> cards) {
-    return 0;
+      int ret = this.getTrumpWinner(cards);
+      if(ret != -1) {
+          return ret;
+      }
+      else {
+            ret = super.getWinner(cards);
+            return ret;
+        }
   }
 
   @Override
@@ -40,6 +47,23 @@ public class WhistTrumpModel extends WhistModel {
   public WhistTrumpModel(List<StandardCard> deck) {
     super(deck);
     this.trump = null;
+  }
+
+
+    /**
+     * Determines the player who had the highest trump value, returns -1 if none exists
+     * @param someCards the cards the method goes through
+     * @return the player that had the highest trump value, if one exists, returns -1 otherwise
+     */
+    private int getTrumpWinner(List<StandardCard> someCards) {
+      int winner = -1;
+      for (StandardCard c : someCards) {
+          if (c.getSuit() == this.trump) {
+              winner = this.getCardsInPlay().get(c);
+              break;
+          }
+      }
+      return winner;
   }
 
 

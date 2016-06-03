@@ -58,6 +58,7 @@ public class WhistModel extends GenericStandardDeckGame implements CardGameModel
             } else if (!this.isGameOver()) {
                 this.updateTurn();
             }
+            this.trickSuit = null;
         }
 
         //if its the first play then set the suit
@@ -350,6 +351,10 @@ public class WhistModel extends GenericStandardDeckGame implements CardGameModel
             throw new IllegalArgumentException("Please enter a valid player");
         }
         this.currentWinner = i;
+    }
+
+    protected HashMap<StandardCard, Integer> getCardsInPlay() {
+        return this.cardsInPlay;
     }
 
 }

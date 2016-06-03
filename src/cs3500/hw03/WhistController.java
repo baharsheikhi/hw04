@@ -1,5 +1,7 @@
 package cs3500.hw03;
 
+import cs3500.hw04.WhistTrumpModel;
+
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.NoSuchElementException;
@@ -104,6 +106,6 @@ class Runner {
 
     public static void main(String[] args) {
         new WhistController(new InputStreamReader(System.in),
- System.out).playGame(new WhistModel(), 4);
+ System.out).playGame(new WhistTrumpModel(), 4);
     }
 }
